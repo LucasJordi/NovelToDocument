@@ -81,7 +81,7 @@ def getChapters(link):
     
     soup = BeautifulSoup(wd.page_source, 'html.parser')
     
-    p=soup.find(class_="tabbable light").find_all("a")
+    p=soup.find(class_="panel-body").find_all("a")
 
     for var in p:
         data.append({'id':len(data)+1,'title':var.text,'link':linkGlobal+var.get('href')})

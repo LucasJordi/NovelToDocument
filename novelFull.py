@@ -54,7 +54,6 @@ def getChapter(link,path):
 
     
     generateTxt(chap,newTitle,path)
-    wd.close()
     return chap
  
 
@@ -88,6 +87,6 @@ def getChapters(link):
         #print(data[-1]["title"])
         
         getChapter(data[-1]["link"],path)     
-    
+    wd.close()
 
 getChapters("https://readnovelfull.com/the-second-coming-of-gluttony-novel.html")

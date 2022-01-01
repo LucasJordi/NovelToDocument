@@ -86,12 +86,7 @@ def getChapters(link):
         data.append({'id':len(data)+1,'title':var.text,'link':linkGlobal+var.get('href')})
         #print(data[-1]["title"])
         
-        getChapter(data[-1]["link"],path)   
-    # for var in data:
-    #     print(var["id"] % 40)
-        
-    #     
-    #     getChapter(var["link"],path)    
+        getChapter(data[-1]["link"],path)     
     
 
 getChapters("https://readnovelfull.com/the-second-coming-of-gluttony-novel.html")

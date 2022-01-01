@@ -5,6 +5,7 @@ Esse código possibilita capturar todos os capítulos de uma novel pré-definida
 Sites suportados:
 
 * NovelFull
+* WuxiaWorld
 
 
 

@@ -4,8 +4,9 @@ Esse código possibilita capturar todos os capítulos de uma novel pré-definida
 ### OBS:
 Sites suportados:
 
-* NovelFull
-* WuxiaWorld
+* [NovelFull](https://novelfull.com/)
+* [WuxiaWorld](https://www.wuxiaworld.com/)
+* [Nano Mashin Online](https://www.nanomashin.online/)
 
 
 

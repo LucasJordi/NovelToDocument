@@ -56,7 +56,6 @@ def getChapters(link):
     r = requests.get(link)
     #wd.get(link)
     data=[]
-    time.sleep(1)
     #soup = BeautifulSoup(wd.page_source, 'html.parser')
     soup = BeautifulSoup(r.text, 'html.parser')
 

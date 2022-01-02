@@ -41,7 +41,7 @@ def getChapters(link):
         try:
             r = requests.get(link+"/page/"+str(page))
             data=[]
-            time.sleep(1)
+            
             
             soup = BeautifulSoup(r.text, 'html.parser')
 
@@ -49,7 +49,7 @@ def getChapters(link):
             newTitle=re.sub('[^a-zA-Z0-9 \n\.]', '', title)
             
             path = "./"+newTitle
-
+            print(title)
             isExist = os.path.exists(path)
             if not isExist:  
                 os.makedirs(path)
@@ -58,8 +58,12 @@ def getChapters(link):
             
             
             
-            p=soup.find_all("ul")[1].find_all("li")
-            print(title)
+            try:
+                p=soup.find_all("ul")[1].find_all("li")
+            except:
+                p=soup.find("ul").find_all("li")
+
+
             
             for var in p:
                 data.append({'id':len(data)+1,'title':var.find("a").text,'link':linkGlobal+var.find("a").get('href')})
@@ -73,4 +77,4 @@ def getChapters(link):
 
 
 
-getChapters("https://www.nanomashin.online/reformation-of-the-deadbeat-noble")
+getChapters("https://www.nanomashin.online/the-dark-magician-transmigrates-after-66666-years")
